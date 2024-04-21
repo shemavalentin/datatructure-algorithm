@@ -40,4 +40,4 @@ O(a + b); // RULE of thumb: Any step that happen with the same indentetion you a
 // If these loops were nested, the big O would be multiplication
 
 O(a * b); // RULE of thumb: Any thing that happens with indentation that is
-// that is nested, you multiply. different input should have different variables
+//  you multiply. different input should have different variables
