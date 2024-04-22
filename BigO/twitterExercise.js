@@ -38,3 +38,10 @@ O(n ^ 2);
 
 "Helloshedohufueheyyyfhuuiwoie".length; // Here the big O is O(1)
 O(1);
+
+// Some times, Readability may be matter than Scalability
+// Sometimes, Time complexity may be less important than Space complexity.
+// This is something we have to be careful
+
+// QUOTE
+// " Premature optimization can be a root of the evil"
