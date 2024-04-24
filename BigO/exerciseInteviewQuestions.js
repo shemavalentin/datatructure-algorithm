@@ -27,6 +27,8 @@
 
 // Let's code through the brute force solution to get more details
 
+// Naive
+
 const array1 = ["a", "b", "c", "x"];
 const array2 = ["z", "y", "x"];
 
@@ -91,10 +93,9 @@ function containsCommonItem2(arrx, arry) {
       return true;
     }
   }
-
   return false;
 
-  //step 10: Start acually
+  //step 10: Start actually
 }
 
 // O(a + b)  This is better when it comes to Time complexity.

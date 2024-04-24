@@ -18,7 +18,7 @@ function arrayOfHiNTimes(n) {
   return history;
 }
 
-arrayOfHiNTimes(6); // O(n)     Becouse I'm create space of an Array Cfr Cheat Sheets
+arrayOfHiNTimes(6); // O(n)     Becouse I'm creating space of an Array Cfr Cheat Sheets
 
 // What Causes Space Complexity?
 // • Variables
