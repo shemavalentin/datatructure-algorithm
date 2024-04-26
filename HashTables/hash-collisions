@@ -17,3 +17,8 @@ user.scream(); // O(1)
 
 // When you keep on adding to the same memory space, you are create now collision
 // it has the big O(n/k) => O(n).
+
+const a = new Map(); // Map() allows to save any data type as the key
+// It maintains an insertion order while normaly data is inserted rondomly.
+
+const b = new Set(); // It is mostly like Map but the only difference is that it stores the key not values.

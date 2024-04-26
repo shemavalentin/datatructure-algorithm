@@ -35,7 +35,7 @@ class MyArray {
 
     return item;
   }
-  // Method shiftItems to loop though items int the array
+  // Method shiftItems to loop through items int the array
   shiftItems(index) {
     for (let i = index; i < this.length - 1; i++) {
       this.data[i] = this.data[i + 1];
