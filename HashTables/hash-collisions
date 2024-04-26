@@ -1,0 +1,19 @@
+// Let's create an object
+
+let user = {
+  age: 54,
+  name: "Kylie",
+  magic: true,
+  scream: function () {
+    console.log("ahhhhh!");
+  },
+};
+
+user.age; //O(1)
+// Adding a new property
+user.spell = "abra kadabra"; // O(1)
+//user;
+user.scream(); // O(1)
+
+// When you keep on adding to the same memory space, you are create now collision
+// it has the big O(n/k) => O(n).
