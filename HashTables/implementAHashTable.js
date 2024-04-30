@@ -37,9 +37,22 @@ class HashTable {
     } // O(1)
     return undefined;
   }
+
+  // Creating Keys in my hashTable to enable us to loop though the keys
+  keys() {
+    const keyArray = [];
+    for (let i = 0; i < this.data.length; i++) {
+      if (this.data[i]) {
+        //console.log(this.data[i][0]);
+        keyArray.push(this.data[i][0][1]);
+      }
+    }
+    return keyArray;
+  }
 }
 
 const myHashTable = new HashTable(50);
 myHashTable.set("grapes", 10000);
 myHashTable.set("apples", 60);
-myHashTable.get("grapes");
+myHashTable.set("oranges", 2);
+myHashTable.keys();
