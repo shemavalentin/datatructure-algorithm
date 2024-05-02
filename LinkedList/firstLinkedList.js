@@ -15,6 +15,16 @@
 //     }
 // }
 
+
+// TO KEEP YOUSELF DRY YOU CAN USE A OOP CLASS
+
+class Node{
+    constructor(value) {
+        this.value = value;
+        this.next = null;
+    }
+}
+
 // creating class instance to create the linkedList
 class LinkedList {
     constructor(value) {     // The constructor is to create the first node
@@ -28,11 +38,13 @@ class LinkedList {
         this.length = 1;
     }
     append(value) {
-        // creating a new node. It's an object
-        const newNode = {
-            value: value,
-            next: null
-        };
+        // // creating a new node. It's an object
+        // const newNode = {
+        //     value: value,
+        //     next: null
+        // };
+
+        this.newNode = new Node(value);
 
         // attaching the newNode to the previous
         this.tail.next = newNode;
