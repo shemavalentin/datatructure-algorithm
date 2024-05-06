@@ -33,7 +33,7 @@ class LinkedList {
             next: null
         }
 
-        // Becouse the first value(head) is also considered as the only one item then the head is the also tail
+        // Becouse the first value(head) is also considered as the only one item then the head is also the tail
         this.tail = this.head;
         this.length = 1;
     }
@@ -44,7 +44,7 @@ class LinkedList {
         //     next: null
         // };
 
-        this.newNode = new Node(value);
+        this.newNode = new Node(value); // this is the class used here and it is the same as the above
 
         // attaching the newNode to the previous
         this.tail.next = newNode;
@@ -77,16 +77,13 @@ class LinkedList2 {
         }
 
         // Attaching the value to the head node
-
         this.tail.next = newNode2;
         this.tail = newNode2;
         //this.length++;
         return this;
-
     }
 
     // Adding prepend(Adding to the head)
-
     prepend(value) {
         const addToHead = {
             value: value,
