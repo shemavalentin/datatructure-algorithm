@@ -97,15 +97,21 @@ class LinkedList2 {
 
   // REMOVING A VALUE
 
-  remove(index) {}
+  remove(index) {
+    //Check params whether index is positive number, whether the index is higher than the length
+    const leader = this.traverseToIndex(index - 1);
+    const unwantedNode = leader.next;
+    leader.next = unwantedNode.next;
+    this.length--;
+    return this.printList();
+  }
 }
-//    *->*    The first is the leader index and we need to insert btn the leader and the next
-//     *
-//
 
 const myLinkedListEx = new LinkedList2(15);
 myLinkedListEx.append(5);
-myLinkedListEx.append(10);
-myLinkedListEx.append(25);
-myLinkedListEx.prepend(7);
-myLinkedListEx.insert(0, 99);
+myLinkedListEx.append(16);
+
+//myLinkedListEx.prepend(7);
+myLinkedListEx.insert(1, 99);
+myLinkedListEx.insert(3, 6);
+myLinkedListEx.remove(2);
