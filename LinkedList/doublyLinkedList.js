@@ -99,6 +99,41 @@ class DoublyLinkedList {
     this.length--;
     return this.printList();
   }
+
+  reverse() {
+    // inputs check
+    //
+    // if there only one input or if(this.length === 1) or if(!null){}
+
+    if (!this.head.next) {
+      return this.head;
+    }
+    // Otherwise let's code when there are more than on inputs
+
+    let first = this.head;
+    this.tail = this.head;
+    let second = first.next;
+
+    // Let's now loop through these two inputs
+    // If second exist, not null
+    while (second) {
+      // store the second.next (third) in temporary memory(temp)
+
+      // Now we have reference to 1, 2,3 indexes
+      const temp = second.next;
+
+      //Here we can start to reverse
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+
+    this.head.next = null;
+    this.head = first;
+
+    // return this.printList();
+    return this;
+  }
 }
 
 const linkedList = new DoublyLinkedList(10);
@@ -106,7 +141,13 @@ linkedList.append(5);
 linkedList.append(16);
 
 linkedList.prepend(1);
-
-linkedList.insert(1, 99);
 linkedList.printList();
-//linkedList.remove(1);
+
+linkedList.insert(1, 16);
+linkedList.insert(20, 88);
+linkedList.printList();
+
+linkedList.remove(2);
+linkedList.remove(2);
+
+linkedList.reverse();
