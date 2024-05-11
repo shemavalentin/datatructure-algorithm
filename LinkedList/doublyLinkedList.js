@@ -151,3 +151,23 @@ linkedList.remove(2);
 linkedList.remove(2);
 
 linkedList.reverse();
+
+// Reversing a singly linkedList using functions
+function reverseList(head) {
+  let curr = head;
+  let prev = null;
+  let next;
+
+  // Looping through the list
+
+  while (curr !== null) {
+    next = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = next;
+  }
+
+  return prev;
+}
+
+reverseList(1, 2, 3, 4, 5);
