@@ -102,3 +102,56 @@ myArrayStack.pop();
 myArrayStack.pop();
 
 //myArrayStack.peek();
+
+// interview question
+
+// Implement a first in first out(FIFO) queue using only two stacks.
+// The implemented queue shoild support all the function of a normal queue
+// (push, peek, pop, and empty)
+
+class MyQueue {
+  constructor() {
+    this.pushStack = [];
+    this.popStack = [];
+    this.length = 0;
+  }
+
+  push(value) {
+    this.pushStack.push(value);
+    this.length++;
+
+    return this;
+  }
+
+  pop() {
+    if (!this.popStack.length) {
+      while (this.pushStack.length) {
+        this.popStack.push(this.pushStack.pop());
+      }
+    }
+
+    return this.popStack.pop();
+  }
+
+  peek() {
+    if (!this.popStack.length) {
+      while (this.pushStack.length) {
+        this.popStack.push(this.pushStack.pop());
+      }
+    }
+    return this.popStack[this.popStack.length - 1];
+  }
+
+  empty() {
+    return !this.pushStack.lentgh && !this.popStack.length;
+  }
+}
+
+myQueueStack = new MyQueue();
+myQueueStack.push(1);
+myQueueStack.push(2);
+myQueueStack.push(3);
+myQueueStack.push(4);
+myQueueStack.push(5);
+
+myQueueStack.empty();
