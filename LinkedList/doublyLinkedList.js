@@ -153,6 +153,8 @@ linkedList.remove(2);
 linkedList.reverse();
 
 // Reversing a singly linkedList using functions
+
+const head = [1, 2, 3, 4, 5];
 function reverseList(head) {
   let curr = head;
   let prev = null;
@@ -170,4 +172,4 @@ function reverseList(head) {
   return prev;
 }
 
-reverseList(1, 2, 3, 4, 5);
+reverseList();

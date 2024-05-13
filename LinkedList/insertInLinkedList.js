@@ -71,7 +71,7 @@ class LinkedList2 {
     };
     const leader = this.traverseToIndex(index - 1);
 
-    // But we have cut off the connection(pionter) btn nodes at i[2] and [3]. we need to keep it.
+    // But we have cut off the connection(pointer) btn nodes at i[2] and [3]. we need to keep it.
     // next of the leader node is the new node
     const holdingPointer = leader.next;
     leader.next = newNode;
