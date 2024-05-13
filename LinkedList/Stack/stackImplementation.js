@@ -74,45 +74,31 @@ myStack.pop();
 
 class Stack {
   constructor(value) {
-    this.value = value;
-    this.next = null;
-    this.length = 0;
+    this.array = [];
+    //   this.length = 0;
   }
 
   peek() {
-    return this.top;
+    return this.array[this.array.length - 1];
   }
 
   push(value) {
-    const newNode = new Node(value);
-    if (this.top === 0) {
-      this.top = newNode;
-      this.bottom = newNode;
-    } else {
-      const holdingPointer = this.top;
-      this.top = newNode;
-      this.top.next = holdingPointer;
-    }
-
-    this.length++;
+    this.array.push(value);
     return this;
   }
 
   pop() {
-    // Checking if there exist a node
-
-    if (!this.top) {
-      return null;
-    }
-
-    // check if the buottom is equal to top after remove
-
-    if (this.top === this.bottom) {
-      return (this.bottom = null);
-    }
-
-    this.top = this.top.next;
-    this.length--;
+    this.array.pop();
     return this;
   }
 }
+
+myArrayStack = new Stack();
+myArrayStack.push("Google");
+myArrayStack.push("Udemy");
+myArrayStack.push("Discord");
+myArrayStack.pop();
+myArrayStack.pop();
+myArrayStack.pop();
+
+//myArrayStack.peek();
