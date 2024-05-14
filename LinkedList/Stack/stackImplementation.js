@@ -73,7 +73,7 @@ myStack.pop();
 // Let's convert into arrays
 
 class Stack {
-  constructor(value) {
+  constructor() {
     this.array = [];
     //   this.length = 0;
   }
@@ -113,14 +113,11 @@ class MyQueue {
   constructor() {
     this.pushStack = [];
     this.popStack = [];
-    this.length = 0;
+    //this.length = 0;
   }
 
   push(value) {
-    this.pushStack.push(value);
-    this.length++;
-
-    return this;
+    return this.pushStack.push(value);
   }
 
   pop() {
@@ -139,19 +136,22 @@ class MyQueue {
         this.popStack.push(this.pushStack.pop());
       }
     }
+
+    // Here we are not popping off the popStack, we are returning the last alement in popStack
     return this.popStack[this.popStack.length - 1];
   }
 
   empty() {
-    return !this.pushStack.lentgh && !this.popStack.length;
+    return !this.pushStack.length && !this.popStack.length;
   }
 }
 
 myQueueStack = new MyQueue();
 myQueueStack.push(1);
 myQueueStack.push(2);
-myQueueStack.push(3);
-myQueueStack.push(4);
-myQueueStack.push(5);
+myQueueStack.pop();
+myQueueStack.pop();
+
+myQueueStack.peek();
 
 myQueueStack.empty();
