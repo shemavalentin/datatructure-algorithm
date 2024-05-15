@@ -14,7 +14,32 @@ class BinarySearchTree {
     this.root = null;
   }
 
-  insert(value) {}
+  insert(value) {
+    const newNode = new Node(value);
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      // Cze we will also need to traverse from root and we don't know how long nodes are
+      let currentNode = this.root;
+      while (true) {
+        if (value < currentNode.value) {
+          // left
+          if (!currentNode.left) {
+            currentNode.left = newNode;
+            return this;
+          }
+          // If there is a node at the left
+          currentNode = currentNode.left;
+        } else {
+          if (!currentNode.right) {
+            currentNode.right = newNode;
+            return this;
+          }
+          currentNode = currentNode.right;
+        }
+      }
+    }
+  }
 
   lookup(value) {}
 
@@ -22,6 +47,15 @@ class BinarySearchTree {
 }
 
 const tree = new BinarySearchTree();
+tree.insert(9);
+tree.insert(4);
+tree.insert(6);
+tree.insert(20);
+tree.insert(170);
+tree.insert(15);
+tree.insert(1);
+
+JSON.stringify(traverse(tree.root));
 
 // A helpfer function to test if nodes have been well created
 
