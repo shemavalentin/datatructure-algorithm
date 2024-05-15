@@ -41,7 +41,24 @@ class BinarySearchTree {
     }
   }
 
-  lookup(value) {}
+  lookup(value) {
+    // First check if there is a root node
+    if (!this.root) {
+      return false;
+    }
+    let currentNode = this.root;
+    while (currentNode) {
+      if (value < currentNode.value) {
+        currentNode = currentNode.left;
+      } else if (value > currentNode.value) {
+        currentNode = currentNode.right;
+      } else if (currentNode.value === value) {
+        // We now found a match we have to return
+        return currentNode;
+      }
+    }
+    return false;
+  }
 
   // remove
 }
@@ -54,8 +71,9 @@ tree.insert(20);
 tree.insert(170);
 tree.insert(15);
 tree.insert(1);
+tree.lookup(19);
 
-JSON.stringify(traverse(tree.root));
+//JSON.stringify(traverse(tree.root));    // Commented this function cze on look up I don't need to see if the node has been created
 
 // A helpfer function to test if nodes have been well created
 
