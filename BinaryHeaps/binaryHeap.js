@@ -17,3 +17,5 @@
 
 // We use methods: findMax();  and findMin() to find the lowest
 // LookUp is O(1)
+
+// Binary Heap Trees are also important in priority Queues( Where we consider first priority)
