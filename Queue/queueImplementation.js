@@ -34,7 +34,7 @@ class Queue {
       return null;
     }
 
-    // We can alse check if this is the last in queue
+    // We can also check if this is the last in queue
 
     if (this.first === this.last) {
       this.last = null;
