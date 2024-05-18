@@ -17,7 +17,7 @@ function findFactorialRecursive(number) {
   return number * findFactorialRecursive(number - 1);
   //       5* (findFactorialRecursive(4))
 }
-findFactorialRecursive(5);
+findFactorialRecursive(5); // 5*4*3*2
 
 function findFactorialIterative(number) {
   let answer = 1;
