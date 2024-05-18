@@ -1,0 +1,22 @@
+It's a function that calls itself. but it has two problems
+
+  1)  They can call to endlessly and fill the memory due to every single call should be remembered
+  and allocated memory. 
+
+  We really need to remembere that our memory is limited. what keeps these calls in is 
+  the call stack. remember that our codes are read and excecute in call stack
+
+  2) 
+
+  example:  
+  function inception(){
+    debugger;
+    inception();
+    
+     }
+
+     inception();
+
+     the recursive function has two parths:
+           - The recursive case that is to call the function again
+           - And the base case that is to stop calling the function there is nothing to search
