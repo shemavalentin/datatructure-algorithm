@@ -1,4 +1,4 @@
-// Given a number N return the index value of the fibonacci sequency where the sequency
+// Given a number N, return the index value of the fibonacci sequency where the sequency
 // is:
 // 0,1,1,2,3,5,8,13,21,34,55,89,144...
 
@@ -9,6 +9,11 @@ function fibonacciIterative(n) {}
 
 fibonacciIterative(3);
 
-function fibonacciIterativeRecursive(n) {}
+function fibonacciRecursive(n) {
+  if (n < 2) {
+    return n;
+  }
+  return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+}
 
-fibonacciIterativeRecursive(3);
+fibonacciRecursive(3);

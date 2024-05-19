@@ -34,7 +34,7 @@ function findFactorialIterative(number) {
 
   for (let i = 2; i <= number; i++) {
     // O(n) as there is a for loop
-    answer * i;
+    answer = answer * i;
   }
   return answer;
 }
