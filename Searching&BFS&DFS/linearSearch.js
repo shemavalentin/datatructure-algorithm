@@ -8,7 +8,18 @@ var beasts = ["Centaur", "Godzilla", "Mosura", "Minotaur", "Hydra", "Nessie"];
 
 // Now to find where is Godzilla
 beasts.indexOf("Godzilla");
-// or
+// or use findIndex
 beasts.findIndex(function (item) {
   return item == "Godzilla";
 });
+// Use find function
+
+beasts.find(function (item) {
+  return item === "Godzilla";
+});
+
+// Use .include function which retrns a boolean true or false.
+beasts.includes("Godzilla");
+
+// We can't use linear search to index web site like google or search for a friend on facebook
+// as the list should be very long time.
