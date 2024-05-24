@@ -15,6 +15,13 @@
 //=>  We are going to use QUEUE data structure which allows us to keep a referance to the
 // node we want to came back to.
 
+// BFS is used to look for the shortest path(we can check to see fb friends with this data structure
+// what are the most related items on amazon, who are our closest friend on facebook
+// or closest connection on lonkedIn)
+
+// This algorithm is used in recomendation engines, peer to peer network, even Google Maps
+// Facebook friend requests and Instagram recommendations.
+// The BSF allows us to convert a graph essentially into a tree.
 // class to create a new node when we need a new one
 class Node {
   constructor(value) {

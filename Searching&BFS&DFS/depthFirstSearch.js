@@ -10,6 +10,9 @@
 
 // The DFS is implemented in three ways: Inorder(33,101,105), preorder(101,33,105), postorder(33,105,101)
 
+//   In summary, DFS is powerful to check to see if a node exists, or something exists cze we go deeper
+//  It is the best cze it doesn't  need more memory and it is fairly fast than BFS.
+
 //          101
 //         /   \
 //        33    105
