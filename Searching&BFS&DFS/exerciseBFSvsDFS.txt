@@ -1,0 +1,14 @@
+If you know a solution is not far from the root of the tree:
+Answ: BFS
+
+If the tree is very deep and solutions are rare:  Answ: We will use BFS cse it will
+search to every level untill we find the solution and it won't take too long as DFS.
+The solution could be DFS but it will take longer even though BFS will need too much memory.
+
+If the tree is very wide:  Here will use DFS, becouse BFS will need too much memory.
+
+If solutions are frequent but located deep in the tree: DFS
+
+Determining whether a path exists between two nodes: DFS (This is what DFS has been built for)
+
+Finding the shortest path: BFS
