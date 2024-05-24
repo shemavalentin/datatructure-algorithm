@@ -165,14 +165,14 @@ class BinarySearchTree {
     return traversePostOrder(this.root, []);
   }
   DFSPreorder() {
-    return traversePreorder(this.root, []);
+    return traversePreOrder(this.root, []);
   }
 }
 
 // Creating the funtion to traverse the tree
 
 function traverseInOrder(node, list) {
-  console.log(node.value);
+  //console.log(node.value);
   // Checking if at leftmost there is a node
   if (node.left) {
     // then traverse all the way down at the last left node by calling the recursive function we created
@@ -184,8 +184,52 @@ function traverseInOrder(node, list) {
 
   // Doing the same thing as we did to the left
   if (node.right) {
-    traverseInorder(node.right, list);
+    traverseInOrder(node.right, list);
   }
+  return list;
+}
+
+// Becouse it is pretty the same with preorder, we only change directions
+// In preorder we start from the parent(we push the parent first then go to the left)
+
+function traversePreOrder(node, list) {
+  //console.log(node.value);
+  list.push(node.value); // In preorder we push the parent first
+  // Checking if at leftmost there is a node
+  if (node.left) {
+    // then traverse all the way down at the last left node by calling the recursive function we created
+    traversePreOrder(node.left, list);
+  }
+
+  // If there is no more left node, go to the next step and push into the list
+
+  // Doing the same thing as we did to the left
+  if (node.right) {
+    traversePreOrder(node.right, list);
+  }
+  return list;
+}
+
+// Implementing PostOrder. We actually from the list node at left, go to right left-right node, then go to parent
+// then we go to right-left leaf node, then right-right leaf node then their parent, then root(or parent) node.
+
+function traversePostOrder(node, list) {
+  //console.log(node.value);
+
+  // Checking if at leftmost there is a node
+  if (node.left) {
+    // then traverse all the way down at the last left node by calling the recursive function we created
+    traversePostOrder(node.left, list);
+  }
+
+  // If there is no more left node, go to the next step and push into the list
+
+  // Doing the same thing as we did to the left
+  if (node.right) {
+    traversePostOrder(node.right, list);
+  }
+
+  list.push(node.value); // In postorder, we start from the last node at the left, then go to the left-right node, then their parents.
   return list;
 }
 
@@ -204,7 +248,9 @@ tree.insert(1);
 tree.lookup(19);
 // tree.breadthFirstSearch();
 // tree.breadthFirstSearchRec([tree.root], list);
-tree.DFSInorder();
+console.log("DSFInorder", tree.DFSInorder());
+console.log("DSF Preorder", tree.DFSPreorder());
+console.log("DSF PostOrder", tree.DFSPostorder());
 
 //JSON.stringify(traverse(tree.root));    // Commented this function cze on look up I don't need to see if the node has been created
 
