@@ -185,6 +185,30 @@ class BinarySearchTree {
     }
     return list;
   }
+
+  // Just for fun let's code BFS using Recursion
+  breadthFirstSearchRec() {
+    // we need to create a base case where to stop
+    if (!queue.length) {
+      return list;
+    }
+    let currentNode = queue.shift();
+    //Making sure we pushed the list
+    list.push(currentNode.value);
+    if (currentNode.left) {
+      //Added 4 to the queue
+      queue.push(currentNode.left);
+    }
+
+    //Adding to the right side
+    // Now, asking if there is a node at the right
+
+    if (currentNode.right) {
+      // Adding to the queue
+      queue.push(currentNode.right);
+    }
+    return this.breadthFirstSearchRec(queue, list);
+  }
 }
 
 const tree = new BinarySearchTree();
@@ -197,6 +221,7 @@ tree.insert(15);
 tree.insert(1);
 tree.lookup(19);
 tree.breadthFirstSearch();
+tree.breadthFirstSearchRec([tree.root], list);
 
 //JSON.stringify(traverse(tree.root));    // Commented this function cze on look up I don't need to see if the node has been created
 
