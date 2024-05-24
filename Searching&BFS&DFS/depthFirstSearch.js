@@ -12,6 +12,10 @@
 
 //   In summary, DFS is powerful to check to see if a node exists, or something exists cze we go deeper
 //  It is the best cze it doesn't  need more memory and it is fairly fast than BFS.
+//  It doesn't show us the shortest path but telling us that the path exists.
+
+// It uses the idea of Backtracking after a dead ends and then repeating the walk
+// down, it is just a recursion. It keeps doing the same things over and over
 
 //          101
 //         /   \

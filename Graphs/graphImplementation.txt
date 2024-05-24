@@ -14,7 +14,7 @@ const graph1 = [[2], [2, 3], [0, 1, 3], [1, 2]]; // We can use also, linked list
 // In this case, we create a graph where the index is the node, and the value, is the node's neighbours.
 
 // In the above array, index of 0 is connected to 2, index of 1 connected to 2 and three, the index of 2
-// is connected to 0, 1 , 2, .....
+// is connected to 0, 1 , 2, ..... here number the above array with their respective indices.
 
 // Adjacency Matrix
 const graph2 = [
@@ -28,7 +28,7 @@ const graph2 = [
 // Adjacent Matrix , When the graph is Weighted, the adjacent could be represented by numbers
 const graph3 = [
   // 0:[0, 0, 1, 0],
-  //1:[0, 0, 1, 1], // But can use objects(objects) here and and assign keys
+  //1:[0, 0, 1, 1], // But can use objects(objects) here and assign keys
   //2:[1, 1, 0, 1],
   //3:[0, 1, 1, 0]
 ];

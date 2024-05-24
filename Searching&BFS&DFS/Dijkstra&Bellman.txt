@@ -1,0 +1,43 @@
+
+These algorithms won't be asked to be implemted in interview but it is better to 
+understand them 
+
+
+
+The BFS considers that all nodes have the same weight even though it can show us the nearest path.
+we need something to use to compare thos node's weight.
+
+That's where the Dijkstra and Bellman-Ford came to the rescue.
+
+For example in real life: Some roads are faster than others. we can have more trafic in one roads
+may be the distance from one distance is shorter than the other and the weighted graph has the numbers
+associated with the other
+
+And the DFS doesn't take care also the weight we needed something else.
+
+Then Dijkstra and Bellman-Ford are used to answer to the question of finding the Shortest Path.
+ They allow us to find the shortest path between two nodes of weighted graph.
+
+these are the ones used by Google Map to find the shortest way to arrive somewhere.
+
+HINTS
+
+1)  Bellman-Ford algorithm is very efficient at solving the shortest path over the Dijkstra's
+algorithm becouse it can accomodate negative weights.
+
+=> If a weighted graph has negative number(weights), Bellman Ford algorithm is going to
+solve the shortest path problem, while Dijkstra won't be able to.
+
+Now why would you ever use Dijkstra's algorithm if Bellman can do better?
+
+=>>  Belman can take long to run  in time of complexity  and it's not the most efficient algorithm.
+The worst case of Bellman Ford algorith is usually time complexity of O(n^2). It is not very efficient.
+
+Dijkstra's algorithm on the other hand, is a bit faster than than and a little bit more efficient 
+with
+
+if the interviewer shows a graph which doesn't have negative numbers,
+will you answer BSF?, DSF?, Bellman Ford or Dijkstra?
+
+The answer is Dijkstra becouse there no negative weights on that graph, it's a weighted graph.
+
