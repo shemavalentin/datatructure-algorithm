@@ -42,6 +42,8 @@ function fibonacci(n) {
 // Improved fibonacci function, here the time complexity O(n)
 // One drowback is that here we are increasing space complexity but here we saved a lot of time
 // and sometimes we need to compansate the time to save the time.
+// The saved time is very huge.
+// This is the prefered memoization approach to go for which starts from top to down
 
 function fibonacciBooster() {
   // O(n)
@@ -61,7 +63,20 @@ function fibonacciBooster() {
   };
 }
 
+// There is another approche which is 'Botton-Up'
+// It can be harder to know when to use this solution
+// It avoids recursion, and you start from the simplest solution to the complex one.
+
+function fibonacciBooster2(n) {
+  let answer = [0, 1];
+  for (let i = 2; i <= n; i++) {
+    answer.push(answer[i - 2] + answer[i - 1]);
+  }
+  return answer.pop();
+}
+
 const improvedFib = fibonacciBooster();
 console.log("slow", fibonacci(35));
 console.log("DP", improvedFib(35));
+console.log("DP2", fibonacciBooster2(35));
 console.log("we did " + calculation + " calculations ");
