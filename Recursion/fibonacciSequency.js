@@ -17,6 +17,8 @@ function fibonacciIterative(n) {
 
 fibonacciIterative(3);
 
+//Fibonacci function using Recursion
+
 function fibonacciRecursive(n) {
   if (n < 2) {
     return n;
